@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Weather App
+  body
+    h1 Weather App
+    form(method='GET', action='/weather')
+      label(for='city') Enter City:
+      input(type='text', name='city', id='city', required)
+      button(type='submit') Get Weather
+
+    if weather
+      h2 Weather in #{weather.name}
+      p Temperature: #{weather.main.temp} °C
+      p Description: #{weather.weather[0].description}
+    if error
+      p #{error}

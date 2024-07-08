@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Weather Data
+  body
+    h1 Weather in #{weather.name}
+    p Temperature: #{weather.main.temp} °C
+    p Description: #{weather.weather[0].description}
+    p Humidity: #{weather.main.humidity} %
+    p Wind Speed: #{weather.wind.speed} m/s
+    a(href="/") Back
